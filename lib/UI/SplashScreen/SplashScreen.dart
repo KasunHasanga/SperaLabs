@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spera_lab_first_task/UI/HomePage/HomePage.dart';
 
 import 'CurvePainter.dart';
 
@@ -52,6 +53,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   splashColor: Colors.white70,
                   color: Colors.white,
                   onPressed: () {
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>HomePage()));
                     print(
                       'Press Start Reading Button',
                     );
