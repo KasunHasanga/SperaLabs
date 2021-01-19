@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:spera_lab_first_task/UI/ItemPage/ItemPage.dart';
 import 'package:spera_lab_first_task/UI/Widget/LinearProgressBar.dart';
 
 import 'CurvePainterHome.dart';
@@ -379,7 +380,13 @@ class _HomePageState extends State<HomePage> {
                         child: RaisedButton(
                           textColor: Colors.white70,
                           color: Colors.black,
-                          onPressed: null,
+                          onPressed: (){
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context)=>ItemPage()));
+                            print(
+                              'Press Start Read Button',
+                            );
+                          },
                           child: Text(
                             'Read',
                             style: TextStyle(
