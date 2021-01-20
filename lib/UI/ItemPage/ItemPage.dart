@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:spera_lab_first_task/UI/Widget/ChapterWidget.dart';
 
 class ItemPage extends StatefulWidget {
   @override
@@ -8,6 +9,8 @@ class ItemPage extends StatefulWidget {
 }
 
 class _ItemPageState extends State<ItemPage> {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -128,31 +131,16 @@ class _ItemPageState extends State<ItemPage> {
                       width: 120,
                     ),
                   ),
-
                 ],
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      children: [
 
-                        RichText(
-                            text: TextSpan(children: [
-
-                              TextSpan(text: 'Chapter 1:Monkey',style: TextStyle(color: Colors.black),),
-                            ]))
-                      ],
-                    ),
-                    Icon(Icons.navigate_next_outlined)
-                  ],
-                ),
-              ),
+              ChapterWidget(chapter: 'Chapter 01 : Money',quotes: 'Life is about change',),
+              ChapterWidget(chapter: 'Chapter 02 : Power',quotes: 'Everything loves power',),
+              ChapterWidget(chapter: 'Chapter 03 : Influence',quotes: 'Work smart and Hard',),
+              ChapterWidget(chapter: 'Chapter 04 : Money',quotes: 'Winning is what matter',),
 
               SizedBox(
-                height: 500,
+                height: 0,
               ),
 
               ///You might also Like
@@ -250,7 +238,14 @@ class _ItemPageState extends State<ItemPage> {
                                   child: Text(
                                       'Over 30 million copies have been sold worldwide & the best-selling books of all time. ')),
                             ],
-                          )
+                          ),
+                         Container(
+                           margin: EdgeInsets.only(left: 80),
+                           child:  FlatButton(onPressed: (){},child: Text('Read'),
+                             shape: RoundedRectangleBorder (
+                                 borderRadius: BorderRadius.circular(10)
+                             ),),
+                         )
                         ],
                       ),
                     ),
@@ -263,26 +258,7 @@ class _ItemPageState extends State<ItemPage> {
                       width: 120,
                     ),
                   ),
-                  Positioned(
-                      right: 0,
-                      left: null,
-                      bottom: 0,
-                      child: RaisedButton(
-                        textColor: Colors.white70,
-                        color: Colors.black,
-                        onPressed: null,
-                        child: Text(
-                          'Read',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.only(
-                              bottomRight: Radius.circular(25),
-                              topLeft: Radius.circular(25)),
-                        ),
-                      )),
+                 
                 ],
               ),
             ],

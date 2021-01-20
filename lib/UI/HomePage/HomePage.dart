@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:spera_lab_first_task/UI/ItemPage/ItemPage.dart';
-import 'package:spera_lab_first_task/UI/Widget/LinearProgressBar.dart';
+
 
 import 'CurvePainterHome.dart';
 
