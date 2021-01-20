@@ -11,7 +11,9 @@ class _ShowCameraHomeState extends State<ShowCameraHome> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Cheese"),
+
       ),
+
     );
   }
 }
