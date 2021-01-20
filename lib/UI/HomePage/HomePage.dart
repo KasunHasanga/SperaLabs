@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:spera_lab_first_task/UI/ItemPage/ItemPage.dart';
-
+import 'package:spera_lab_first_task/UI/Widget/BooksWidget.dart';
 
 import 'CurvePainterHome.dart';
 
@@ -61,207 +61,35 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Stack(
-                        overflow: Overflow.visible,
-                        children: [
-                          Container(
-                            width: 220,
-                            height: 200,
-                            child: Card(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(25)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 150,
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Icon(
-                                              Icons.favorite_outline_outlined,
-                                              color: Colors.black87,
-                                            ),
-                                            Icon(
-                                              Icons.star,
-                                              color: Colors.yellow,
-                                            ),
-                                            Text('4.9')
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                )),
-                          ),
-                          Positioned(
-                              right: 0,
-                              left: 0,
-                              bottom: 0,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  FlatButton(
-                                      onPressed: null, child: Text('Details')),
-                                  RaisedButton(
-                                    textColor: Colors.white70,
-                                    color: Colors.black,
-                                    onPressed: null,
-                                    child: Text(
-                                      'Read',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.only(
-                                          bottomRight: Radius.circular(25),
-                                          topLeft: Radius.circular(25)),
-                                    ),
-                                  )
-                                ],
-                              )),
-                          Positioned(
-                            bottom: 100,
-                            left: 20,
-                            child: Image.asset(
-                              'images/books/Book.png',
-                              width: 100,
-                            ),
-                          ),
-                          Positioned(
-                              left: 20,
-                              bottom: 50,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Crushing & Influence',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 20),
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text('gary Vanchuck'),
-                                ],
-                              )),
-                        ],
-                      ),
+                      BookWidget(
+                          bookAuthor: 'gary Vanchuck',
+                          bookImageurl: 'images/books/Book.png',
+                          bookName: 'Crushing & Influence',
+                          rating: 4.9),
                       SizedBox(
                         width: 15,
                       ),
-                      Stack(
-                        overflow: Overflow.visible,
-                        children: [
-                          Container(
-                            width: 220,
-                            height: 200,
-                            child: Card(
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(25)),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 150,
-                                        ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Icon(
-                                              Icons.favorite_outline_outlined,
-                                              color: Colors.black87,
-                                            ),
-                                            Icon(
-                                              Icons.star,
-                                              color: Colors.yellow,
-                                            ),
-                                            Text('4.9')
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                )),
-                          ),
-                          Positioned(
-                              right: 0,
-                              left: 0,
-                              bottom: 0,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  FlatButton(
-                                      onPressed: null, child: Text('Details')),
-                                  RaisedButton(
-                                    textColor: Colors.white70,
-                                    color: Colors.black,
-                                    onPressed: null,
-                                    child: Text(
-                                      'Read',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.only(
-                                          bottomRight: Radius.circular(25),
-                                          topLeft: Radius.circular(25)),
-                                    ),
-                                  )
-                                ],
-                              )),
-                          Positioned(
-                            bottom: 100,
-                            left: 20,
-                            child: Image.asset(
-                              'images/books/Book.png',
-                              width: 100,
-                            ),
-                          ),
-                          Positioned(
-                              left: 20,
-                              bottom: 50,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Crushing & Influence',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 20),
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text('gary Vanchuck'),
-                                ],
-                              )),
-                        ],
+                      BookWidget(
+                          bookAuthor: 'Anna Karenina',
+                          bookImageurl: 'images/books/Book.jpg',
+                          bookName: 'To Kill a Mockingbird',
+                          rating: 3.2),
+                      SizedBox(
+                        width: 15,
                       ),
+                      BookWidget(
+                          bookAuthor: 'Miguel de Cervantes',
+                          bookImageurl: 'images/books/Book.jpg',
+                          bookName: 'Don Quixote',
+                          rating: 2.9),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      BookWidget(
+                          bookAuthor: 'gary Vanchuck',
+                          bookImageurl: 'images/books/Book.png',
+                          bookName: 'Crushing & Influence',
+                          rating: 4.9),
                     ],
                   ),
                 ),
@@ -328,15 +156,16 @@ class _HomePageState extends State<HomePage> {
                             Row(
                               children: [
                                 Card(
-                                  margin: EdgeInsets.fromLTRB(5, 10,0 , 0),
+                                  margin: EdgeInsets.fromLTRB(5, 10, 0, 0),
                                   shape: RoundedRectangleBorder(
-
                                       borderRadius: BorderRadius.all(
-                                    Radius.elliptical(30,50),
+                                    Radius.elliptical(30, 50),
                                   )),
                                   child: Column(
                                     children: [
-                                      SizedBox(height: 5,),
+                                      SizedBox(
+                                        height: 5,
+                                      ),
                                       Icon(
                                         Icons.star,
                                         color: Colors.yellow,
@@ -347,7 +176,9 @@ class _HomePageState extends State<HomePage> {
                                         height: 5,
                                       ),
                                       Text("4.9"),
-                                      SizedBox(height: 5,)
+                                      SizedBox(
+                                        height: 5,
+                                      )
                                     ],
                                   ),
                                 ),
@@ -379,10 +210,12 @@ class _HomePageState extends State<HomePage> {
                         bottom: 0,
                         child: RaisedButton(
                           textColor: Colors.white70,
-                          color: Colors.black,
-                          onPressed: (){
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context)=>ItemPage()));
+                          color: Colors.black54,
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ItemPage()));
                             print(
                               'Press Start Read Button',
                             );
@@ -437,7 +270,8 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Card(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                      ),
                       child: Container(
                         margin: EdgeInsets.fromLTRB(20, 20, 0, 0),
                         width: double.infinity,

@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:spera_lab_first_task/UI/HomePage/HomePage.dart';
-import 'package:spera_lab_first_task/UI/Other/OtherHomePage.dart';
+import 'package:spera_lab_first_task/UI/Other/QRScann/QRScanHome.dart';
+import 'package:spera_lab_first_task/UI/Other/ShowLocation/ShowLocationHome.dart';
+import 'package:spera_lab_first_task/UI/Other/UseCamera/ShowCameraHome.dart';
+import 'package:spera_lab_first_task/UI/SplashScreen/CurvePainter.dart';
 import 'package:spera_lab_first_task/UI/Widget/CustomButton.dart';
 
-import 'CurvePainter.dart';
 
-class SplashScreen extends StatefulWidget {
+
+class OtherHomePage extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _OtherHomePageState createState() => _OtherHomePageState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _OtherHomePageState extends State<OtherHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,11 +39,11 @@ class _SplashScreenState extends State<SplashScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'flamin',
+                      'Explore New ',
                       style: TextStyle(color: Colors.black54, fontSize: 40),
                     ),
                     Text(
-                      'go.',
+                      'Things.',
                       style: TextStyle(
                           color: Colors.black87,
                           fontSize: 40,
@@ -50,10 +53,11 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 SizedBox(height: 20,),
 
-                CustomeRaisedButton(text: 'Reading Button',navPage: HomePage(),printText: 'start reading',),
-                SizedBox(height: 20,),
-
-                CustomeRaisedButton(text: 'Explore new',navPage: OtherHomePage(),printText: 'Explore page',),
+                CustomeRaisedButton(navPage: QRScanHome(), printText: 'BarCodeScanner', text: 'QR code Scan'),
+                SizedBox(height: 10,),
+                CustomeRaisedButton(navPage: ShowLocation(), printText: 'MyLocation', text: 'My Location'),
+                SizedBox(height: 10,),
+                CustomeRaisedButton(navPage: ShowCameraHome(), printText: 'BarCodeScanner', text: 'selfie'),
 
               ],
             ),
