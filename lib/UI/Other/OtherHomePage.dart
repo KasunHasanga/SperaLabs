@@ -40,13 +40,14 @@ class _OtherHomePageState extends State<OtherHomePage> {
                   children: [
                     Text(
                       'Explore New ',
-                      style: TextStyle(color: Colors.black54, fontSize: 40),
+                      style: TextStyle(color: Colors.black54, fontSize: 30),
                     ),
+                    SizedBox(height: 10,),
                     Text(
                       'Things.',
                       style: TextStyle(
                           color: Colors.black87,
-                          fontSize: 40,
+                          fontSize:30,
                           fontWeight: FontWeight.w800),
                     ),
                   ],
