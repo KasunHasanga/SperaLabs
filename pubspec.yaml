@@ -27,6 +27,7 @@ dependencies:
   url_launcher: ^5.7.10
   image_picker: ^0.6.7+21
   flutter_barcode_scanner: ^1.0.2
+  google_maps_flutter: ^1.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
